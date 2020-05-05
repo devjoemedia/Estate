@@ -421,6 +421,15 @@ header nav ul li a {
   background: url("../img/house-3.jpg");
 }
 
+.swiper-container {
+  width: 100%;
+  margin: auto;
+}
+
+.swiper-container .swiper-wrapper {
+  align-items: center;
+}
+
 .reviews {
   text-align: center;
   padding: 2rem 0;
@@ -436,7 +445,7 @@ header nav ul li a {
 .reviews .review-info {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   padding: 3.5rem 2rem;
-  width: 70%;
+  width: 50%;
   margin: auto;
   position: relative;
 }
@@ -531,7 +540,10 @@ footer {
 @media screen and (max-width: 425px) {
   .wrapper {
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 .5rem;
+  }
+  .swiper-container {
+    width: 100%;
   }
   .showcase-quote {
     position: relative;
@@ -562,7 +574,7 @@ footer {
     width: 100%;
   }
   .reviews .review-info {
-    width: 100%;
+    width: 90%;
   }
   .contact-inner {
     display: block;
