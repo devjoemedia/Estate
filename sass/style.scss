@@ -1,0 +1,586 @@
+// CUSTOM
+.lead {
+  color: #a7a7a7dc;
+}
+.title {
+  color: #444;
+}
+.btn {
+  &-round {
+    padding: 10px 15px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 0 12px 0 #ddd;
+    margin: 10px 0;
+  }
+  &-plain {
+    padding: 10px 15px;
+    background-color: #444;
+    color: #fff;
+    border-radius: none;
+    display: inline-block;
+    box-shadow: 0 0 12px 0 #ddd;
+    margin: 10px 0;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Lucida Sans", sans-serif;
+  line-height: 1.3;
+}
+.wrapper {
+  max-width: 1120px;
+  margin: auto;
+}
+// GENERAL STYLES
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.active {
+  color: #0078ff;
+}
+// HEADER
+header {
+  padding: 10px;
+  background: #333;
+  nav {
+    a {
+      color: #fff;
+    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        margin: 10px;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// MOBILE MENU
+.mobile-menu {
+  width: 30px;
+  height: 30px;
+  float: right;
+  display: none;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    margin: 5px;
+    background: #ccc;
+  }
+}
+// MOBILE NAV
+.mobile-nav {
+  height: 100vh;
+  width: 70%;
+  background: #222;
+  padding: 2rem;
+  display: none;
+  transition:all  3s ease;
+  a {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  li {
+    padding: .7rem;
+  }
+}
+
+// SHOWCASE
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &-right {
+    position: relative;
+    .title {
+      font-size: 1.5rem;
+    }
+    .lead {
+      margin: 0.9rem 0;
+    }
+  }
+  &-description {
+    padding: 5rem 3rem;
+  }
+  &-quote {
+    padding: 1.5rem 3rem;
+    position: absolute;
+    bottom: 0;
+    background: #444;
+    color: #ccc;
+    .sub-title {
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}
+// ABOUT
+.about {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  &-left {
+    padding: 3rem 3rem 0 3rem;
+  }
+  &-right {
+    img {
+      // width: 400px;
+      height: 450px;
+    }
+  }
+}
+
+.recent-properties {
+  padding: 3rem 0;
+
+  .title {
+    text-align: center;
+  }
+  .sub-title {
+    text-align: center;
+    color: #333;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+  .properties-inner {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .property {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    img {
+      height: 250px;
+    }
+    &-details {
+      padding: 1rem;
+    }
+    &-title,
+    &-value {
+      color: #222;
+      font-size: 13px;
+    }
+    &-location,
+    &-feature p {
+      color: #ccc;
+      font-size: 13px;
+      margin: 0.5rem 0;
+    }
+    &-feature {
+      display: flex;
+    }
+  }
+}
+// Vacancies
+.vacancies {
+  text-align: center;
+  background: #f5f5f5;
+  padding: 2rem;
+  &-inner {
+    width: 60%;
+    margin: auto;
+    .title {
+      padding-bottom: 2rem;
+    }
+    p {
+      color: #333;
+    }
+  }
+}
+// Team
+.team {
+  padding: 2rem;
+  .title,
+  .sub-title {
+    text-align: center;
+  }
+  .title {
+    padding-bottom: 2rem;
+  }
+  &-members {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .team-member {
+      background: #fff;
+      color: #333;
+      text-align: center;
+      margin: 10px;
+      &:hover {
+        transition: all 0.4s ease;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+      }
+      &:hover .team-overlay {
+        display: block;
+      }
+      &-profile {
+        position: relative;
+        height: 250px;
+        transition: all 0.4s ease;
+        .team-overlay {
+          display: none;
+          background: rgba(0, 0, 0, 0.9);
+          position: absolute;
+          padding: 1rem;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .social {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+          .icon  {
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            // background: #fff;
+            margin: 5px;
+            i {
+              font-size: 2rem;
+              margin-top: 1rem;
+              color: #1f50ee;
+            }
+          }
+        }
+      }
+      img {
+        height: 100%;
+      }
+      h3 {
+        font-size: 1rem;
+        padding: 1rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+// Apartment info
+.apartment {
+  width: 80%;
+  margin: 2rem auto;
+  &-info {
+    padding: 4rem 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #ccc;
+    h2 {
+      font-size: 1.3rem;
+      color: #4d4d4d;
+      padding-bottom: 1rem;
+    }
+    .room-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 2.5rem 0;
+    }
+  }
+  &-description {
+    padding: 2rem 0;
+    h3 {
+      padding-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #4d4d4d;
+    }
+    p {
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #666666;
+    }
+  }
+  &-features {
+    h3 {
+      font-size: 1.3rem;
+      color: #4d4d4d;
+      padding: 1rem 0;
+    }
+    .feature-info {
+      
+      padding: 1rem 0;
+      li {
+        list-style-type: circle;
+        padding: 1rem 0;
+        color: #4d4d4d;
+      }
+    }
+  }
+}
+// Contact
+.contact {
+  padding: 2rem 0;
+  background: #f5f5f5;
+  &-inner {
+    background: #fff;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+
+    h3 {
+      color: #4d4d4d;
+      font-size: 1.2rem;
+    }
+    form {
+      .input-ctn {
+        input {
+          margin: 0.6rem 0;
+        }
+        input,
+        #message {
+          padding: 0.7rem;
+          width: 100%;
+          color: #4d4d4d;
+          outline: none;
+        }
+      }
+    }
+    .contact-left {
+      padding: 2rem;
+    }
+    .contact-right {
+      background: url("../img/house-3.jpg");
+      // background: #0078ff;
+    }
+  }
+}
+// REVIEWS
+.reviews {
+  text-align: center;
+  padding: 2rem 0;
+  .review {
+    &-photo {
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 1rem auto;
+      }
+    }
+    &-info {
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+      padding: 3.5rem 2rem;
+      width: 70%;
+      margin: auto;
+      position: relative;
+      i {
+        position: absolute;
+        font-size: 2rem;
+        color: #4d4d4d;
+        padding: 1rem;
+        left: 0rem;
+        top: 3.5rem;
+      }
+      p {
+        text-align: left;
+        color: #4d4d4d;
+      }
+    }
+    &-name {
+      color: #4d4d4d;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+// FOOTER
+footer {
+  background: #333;
+  padding: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #fff;
+}
+
+// PROPERTY PHOTO DESCRIPTION
+.property-photos-inner {
+  width: 70%;
+  margin: auto;
+  img {
+    height: 450px;
+  }
+  .photo-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .photo {
+      width: 24%;
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+
+}
+.rotate {
+  .line:first-child {
+    position: relative;
+    animation: topAn  .2s  forwards;
+  }
+  .line:nth-child(2) {
+    opacity: 0;
+  }
+  .line:last-child {
+    position: relative;
+    animation: downAn  .2s forwards;
+  }
+}
+// ANIMATIONS
+@keyframes topAn{
+  from {
+    transform: rotate(0);
+  }
+  to {
+    margin-top: 15px;
+    transform: rotate(45deg);
+    
+  }
+}
+@keyframes downAn{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    margin-top: -15px;
+    transform: rotate(-45deg);
+  
+  }
+}
+
+// MEDIA QUARIES
+@media screen and (max-width: 425px){
+  .wrapper {
+    width:100%;
+    padding: 0 1.5rem;
+  }
+  .showcase-quote {
+    position: relative;
+  }
+  .showcase,.about {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  header{
+
+    nav {
+      justify-content: space-between;
+      padding: .4rem 2rem;
+      ul{
+        display: none;
+      }
+    } 
+  } 
+  .mobile-menu {
+    display: block;
+  }
+  .recent-properties {
+
+    .properties-inner,.team-members {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .team-members {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vacancies-inner {
+    width: 100%; 
+  }
+  .reviews {
+
+    .review-info {
+      width: 100%;
+    }
+  }
+  .contact-inner {
+    display: block;
+    .contact-right {
+      display: none;
+    }
+  }
+  .property-photos-inner {
+    width: 100%;
+  }
+  .apartment {
+    width: 95%; 
+  }
+  .property-photos-inner {
+
+    .photo-list {
+      flex-direction: column;
+      .photo {
+        width: 100%; 
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .recent-properties {
+
+    .properties-inner,.team-members {
+      width: 100%;
+      grid-template-columns: 1fr
+    }
+  }
+  .team-members {
+    width: 100%;
+    grid-template-columns: 1fr
+  }
+ 
+}
+@media screen and (max-width: 320px) {
+  .showcase-description {
+    padding: 2rem 1rem;
+  }
+  .showcase-quote {
+    padding: 1rem 2rem;
+  }
+  .about-left {
+    padding: 1.5rem;
+  }
+  .contact-inner {
+    .contact-left {
+      padding: 1rem;
+    }
+  }
+}
