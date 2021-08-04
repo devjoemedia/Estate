@@ -1,4 +1,5 @@
 // CUSTOM
+
 .lead {
   color: #a7a7a7dc;
 }
@@ -17,6 +18,7 @@
   }
   &-plain {
     padding: 10px 15px;
+    outline: none;
     background-color: #444;
     color: #fff;
     border-radius: none;
@@ -103,13 +105,13 @@ header {
   background: #222;
   padding: 2rem;
   display: none;
-  transition:all  3s ease;
+  transition: all 3s ease;
   a {
     font-size: 1rem;
     color: #ccc;
   }
   li {
-    padding: .7rem;
+    padding: 0.7rem;
   }
 }
 
@@ -266,7 +268,7 @@ header {
           display: flex;
           // justify-content: center;
           align-items: center;
-          .icon  {
+          .icon {
             height: 40px;
             width: 40px;
             border-radius: 50px;
@@ -330,7 +332,6 @@ header {
       padding: 1rem 0;
     }
     .feature-info {
-      
       padding: 1rem 0;
       li {
         list-style-type: circle;
@@ -378,48 +379,48 @@ header {
   }
 }
 // REVIEWS
-.swiper-container {
-  width: 100%;
-  margin: auto;
-  .swiper-wrapper {
-    align-items: center;
-  }
-}
+
 .reviews {
   text-align: center;
   padding: 2rem 0;
-  .review {
-    &-photo {
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin: 1rem auto;
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .review {
+      width: 33%;
+      margin: 5px;
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+      &-photo {
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin: 1rem auto;
+        }
       }
-    }
-    &-info {
-      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-      padding: 3.5rem 2rem;
-      width: 50%;
-      margin: auto;
-      position: relative;
-      i {
-        position: absolute;
-        font-size: 2rem;
+      &-info {
+        padding: 3.5rem 2rem;
+        margin: auto;
+        position: relative;
+        i {
+          position: absolute;
+          font-size: 2rem;
+          color: #4d4d4d;
+          padding: 1rem;
+          left: 0rem;
+          top: 3.5rem;
+        }
+        p {
+          text-align: left;
+          color: #4d4d4d;
+        }
+      }
+      &-name {
         color: #4d4d4d;
         padding: 1rem;
-        left: 0rem;
-        top: 3.5rem;
+        font-size: 1.2rem;
       }
-      p {
-        text-align: left;
-        color: #4d4d4d;
-      }
-    }
-    &-name {
-      color: #4d4d4d;
-      padding: 1rem;
-      font-size: 1.2rem;
     }
   }
 }
@@ -450,80 +451,88 @@ footer {
         width: 100%;
         height: 100%;
       }
-
     }
   }
-
 }
 .rotate {
   .line:first-child {
     position: relative;
-    animation: topAn  .2s  forwards;
+    animation: topAn 0.2s forwards;
   }
   .line:nth-child(2) {
     opacity: 0;
   }
   .line:last-child {
     position: relative;
-    animation: downAn  .2s forwards;
+    animation: downAn 0.2s forwards;
   }
 }
 // ANIMATIONS
-@keyframes topAn{
+@keyframes topAn {
   from {
     transform: rotate(0);
   }
   to {
     margin-top: 15px;
     transform: rotate(45deg);
-    
   }
 }
-@keyframes downAn{
+@keyframes downAn {
   from {
     transform: rotate(0deg);
   }
   to {
     margin-top: -15px;
     transform: rotate(-45deg);
-  
   }
 }
 
 // MEDIA QUARIES
-@media screen and (max-width: 425px){
-  .wrapper {
-    width:100%;
-    padding: 0 .5rem;
+@media screen and (max-width: 768px) {
+  .recent-properties {
+    .properties-inner {
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+    }
   }
-  .swiper-container {
+}
+@media screen and (max-width: 425px) {
+  .wrapper {
     width: 100%;
+    padding: 0 0.5rem;
+  }
+  .reviews {
+    &-wrapper {
+      flex-direction: column;
+      .review {
+        width: 100%;
+      }
+    }
   }
   .showcase-quote {
     position: relative;
   }
-  .showcase,.about {
+  .showcase,
+  .about {
     grid-template-columns: 1fr;
     width: 100%;
   }
-  header{
-
+  header {
     nav {
       justify-content: space-between;
-      padding: .4rem 2rem;
-      ul{
+      padding: 0.4rem 2rem;
+      ul {
         display: none;
       }
-    } 
-  } 
+    }
+  }
   .mobile-menu {
     display: block;
   }
   .recent-properties {
-
-    .properties-inner,.team-members {
-      width: 100%;
-      grid-template-columns: repeat(2, 1fr);
+    .properties-inner {
+      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
     }
   }
   .team-members {
@@ -531,10 +540,9 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
   .vacancies-inner {
-    width: 100%; 
+    width: 100%;
   }
   .reviews {
-
     .review-info {
       width: 90%;
     }
@@ -549,14 +557,13 @@ footer {
     width: 100%;
   }
   .apartment {
-    width: 95%; 
+    width: 95%;
   }
   .property-photos-inner {
-
     .photo-list {
       flex-direction: column;
       .photo {
-        width: 100%; 
+        width: 100%;
         height: 200px;
       }
     }
@@ -565,20 +572,17 @@ footer {
 
 @media screen and (max-width: 375px) {
   .recent-properties {
-
-    .properties-inner,.team-members {
+    .team-members {
       width: 100%;
-      grid-template-columns: 1fr
+      grid-template-columns: 1fr;
     }
   }
   .team-members {
     width: 100%;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
- 
 }
 @media screen and (max-width: 320px) {
-
   .showcase-description {
     padding: 2rem 1rem;
   }
