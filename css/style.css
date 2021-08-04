@@ -18,6 +18,7 @@
 
 .btn-plain {
   padding: 10px 15px;
+  outline: none;
   background-color: #444;
   color: #fff;
   border-radius: none;
@@ -113,7 +114,7 @@ header nav ul li a {
   background: #222;
   padding: 2rem;
   display: none;
-  transition: all  3s ease;
+  transition: all 3s ease;
 }
 
 .mobile-nav a {
@@ -122,7 +123,7 @@ header nav ul li a {
 }
 
 .mobile-nav li {
-  padding: .7rem;
+  padding: 0.7rem;
 }
 
 .showcase {
@@ -421,36 +422,37 @@ header nav ul li a {
   background: url("../img/house-3.jpg");
 }
 
-.swiper-container {
-  width: 100%;
-  margin: auto;
-}
-
-.swiper-container .swiper-wrapper {
-  align-items: center;
-}
-
 .reviews {
   text-align: center;
   padding: 2rem 0;
 }
 
-.reviews .review-photo img {
+.reviews-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-wrapper .review {
+  width: 33%;
+  margin: 5px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-wrapper .review-photo img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin: 1rem auto;
 }
 
-.reviews .review-info {
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+.reviews-wrapper .review-info {
   padding: 3.5rem 2rem;
-  width: 50%;
   margin: auto;
   position: relative;
 }
 
-.reviews .review-info i {
+.reviews-wrapper .review-info i {
   position: absolute;
   font-size: 2rem;
   color: #4d4d4d;
@@ -459,12 +461,12 @@ header nav ul li a {
   top: 3.5rem;
 }
 
-.reviews .review-info p {
+.reviews-wrapper .review-info p {
   text-align: left;
   color: #4d4d4d;
 }
 
-.reviews .review-name {
+.reviews-wrapper .review-name {
   color: #4d4d4d;
   padding: 1rem;
   font-size: 1.2rem;
@@ -505,7 +507,7 @@ footer {
 
 .rotate .line:first-child {
   position: relative;
-  animation: topAn  .2s  forwards;
+  animation: topAn 0.2s forwards;
 }
 
 .rotate .line:nth-child(2) {
@@ -514,7 +516,7 @@ footer {
 
 .rotate .line:last-child {
   position: relative;
-  animation: downAn  .2s forwards;
+  animation: downAn 0.2s forwards;
 }
 
 @keyframes topAn {
@@ -537,24 +539,35 @@ footer {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .recent-properties .properties-inner {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .wrapper {
     width: 100%;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
   }
-  .swiper-container {
+  .reviews-wrapper {
+    flex-direction: column;
+  }
+  .reviews-wrapper .review {
     width: 100%;
   }
   .showcase-quote {
     position: relative;
   }
-  .showcase, .about {
+  .showcase,
+  .about {
     grid-template-columns: 1fr;
     width: 100%;
   }
   header nav {
     justify-content: space-between;
-    padding: .4rem 2rem;
+    padding: 0.4rem 2rem;
   }
   header nav ul {
     display: none;
@@ -562,9 +575,9 @@ footer {
   .mobile-menu {
     display: block;
   }
-  .recent-properties .properties-inner, .recent-properties .team-members {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+  .recent-properties .properties-inner {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
   }
   .team-members {
     width: 100%;
@@ -598,7 +611,7 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
-  .recent-properties .properties-inner, .recent-properties .team-members {
+  .recent-properties .team-members {
     width: 100%;
     grid-template-columns: 1fr;
   }
