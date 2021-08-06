@@ -18,12 +18,8 @@
 }
 
 .btn-plain {
-<<<<<<< HEAD
   border: none;
   padding: 10px 25px;
-=======
-  padding: 10px 15px;
->>>>>>> a7e61315c8f8af3e0d784ea5c35be877b606fbf1
   outline: none;
   background-color: #444;
   color: #fff;
@@ -704,6 +700,644 @@ footer {
   }
   .apartment__details--features .apartment--feature {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .recent-properties .team-members {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .team-members {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .showcase-description {
+    padding: 2rem 1rem;
+  }
+  .showcase-quote {
+    padding: 1rem 2rem;
+  }
+  .about-left {
+    padding: 1.5rem;
+  }
+  .contact-inner .contact-left {
+    padding: 1rem;
+  }
+}
+
+.lead {
+  color: #a7a7a7dc;
+}
+
+.title {
+  color: #444;
+}
+
+.btn-round {
+  padding: 10px 15px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 0 12px 0 #ddd;
+  margin: 10px 0;
+}
+
+.btn-plain {
+  padding: 10px 15px;
+  outline: none;
+  background-color: #444;
+  color: #fff;
+  border-radius: none;
+  display: inline-block;
+  box-shadow: 0 0 12px 0 #ddd;
+  margin: 10px 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Lucida Sans", sans-serif;
+  line-height: 1.3;
+}
+
+.wrapper {
+  max-width: 1120px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.active {
+  color: #0078ff;
+}
+
+header {
+  padding: 10px;
+  background: #333;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav a {
+  color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  margin: 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+}
+
+.mobile-menu {
+  width: 30px;
+  height: 30px;
+  float: right;
+  display: none;
+}
+
+.mobile-menu:hover {
+  cursor: pointer;
+}
+
+.mobile-menu .line {
+  width: 100%;
+  height: 2px;
+  margin: 5px;
+  background: #ccc;
+}
+
+.mobile-nav {
+  height: 100vh;
+  width: 70%;
+  background: #222;
+  padding: 2rem;
+  display: none;
+  transition: all 3s ease;
+}
+
+.mobile-nav a {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.mobile-nav li {
+  padding: 0.7rem;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.showcase-right {
+  position: relative;
+}
+
+.showcase-right .title {
+  font-size: 1.5rem;
+}
+
+.showcase-right .lead {
+  margin: 0.9rem 0;
+}
+
+.showcase-description {
+  padding: 5rem 3rem;
+}
+
+.showcase-quote {
+  padding: 1.5rem 3rem;
+  position: absolute;
+  bottom: 0;
+  background: #444;
+  color: #ccc;
+}
+
+.showcase-quote .sub-title {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.about {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about-left {
+  padding: 3rem 3rem 0 3rem;
+}
+
+.about-right img {
+  height: 450px;
+}
+
+.recent-properties {
+  padding: 3rem 0;
+}
+
+.recent-properties .title {
+  text-align: center;
+}
+
+.recent-properties .sub-title {
+  text-align: center;
+  color: #333;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.recent-properties .properties-inner {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.recent-properties .property {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.recent-properties .property img {
+  height: 250px;
+}
+
+.recent-properties .property-details {
+  padding: 1rem;
+}
+
+.recent-properties .property-title, .recent-properties .property-value {
+  color: #222;
+  font-size: 13px;
+}
+
+.recent-properties .property-location,
+.recent-properties .property-feature p {
+  color: #ccc;
+  font-size: 13px;
+  margin: 0.5rem 10px;
+}
+
+.recent-properties .property-feature {
+  display: flex;
+}
+
+.vacancies {
+  text-align: center;
+  background: #f5f5f5;
+  padding: 2rem;
+}
+
+.vacancies-inner {
+  width: 60%;
+  margin: auto;
+}
+
+.vacancies-inner .title {
+  padding-bottom: 2rem;
+}
+
+.vacancies-inner p {
+  color: #333;
+}
+
+.team {
+  padding: 2rem;
+}
+
+.team .title,
+.team .sub-title {
+  text-align: center;
+}
+
+.team .title {
+  padding-bottom: 2rem;
+}
+
+.team-members {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.team-members .team-member {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  margin: 10px;
+}
+
+.team-members .team-member:hover {
+  transition: all 0.4s ease;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-members .team-member:hover .team-overlay {
+  display: block;
+}
+
+.team-members .team-member-profile {
+  position: relative;
+  height: 250px;
+  transition: all 0.4s ease;
+}
+
+.team-members .team-member-profile .team-overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  padding: 1rem;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.team-members .team-member-profile .social {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.team-members .team-member-profile .social .icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+.team-members .team-member-profile .social .icon i {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #1f50ee;
+}
+
+.team-members .team-member img {
+  height: 100%;
+}
+
+.team-members .team-member h3 {
+  font-size: 1rem;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.apartment {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.apartment-info {
+  padding: 4rem 2rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #ccc;
+}
+
+.apartment-info h2 {
+  font-size: 1.3rem;
+  color: #4d4d4d;
+  padding-bottom: 1rem;
+}
+
+.apartment-info .room-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2.5rem 0;
+}
+
+.apartment-description {
+  padding: 2rem 0;
+}
+
+.apartment-description h3 {
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #4d4d4d;
+}
+
+.apartment-description p {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.apartment-features h3 {
+  font-size: 1.3rem;
+  color: #4d4d4d;
+  padding: 1rem 0;
+}
+
+.apartment-features .feature-info {
+  padding: 1rem 0;
+}
+
+.apartment-features .feature-info li {
+  list-style-type: circle;
+  padding: 1rem 0;
+  color: #4d4d4d;
+}
+
+.contact {
+  padding: 2rem 0;
+  background: #f5f5f5;
+}
+
+.contact-inner {
+  background: #fff;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-inner h3 {
+  color: #4d4d4d;
+  font-size: 1.2rem;
+}
+
+.contact-inner form .input-ctn input {
+  margin: 0.6rem 0;
+}
+
+.contact-inner form .input-ctn input,
+.contact-inner form .input-ctn #message {
+  padding: 0.7rem;
+  width: 100%;
+  color: #4d4d4d;
+  outline: none;
+}
+
+.contact-inner .contact-left {
+  padding: 2rem;
+}
+
+.contact-inner .contact-right {
+  background: url("../img/house-3.jpg");
+}
+
+.reviews {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.reviews-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-wrapper .review {
+  width: 33%;
+  margin: 5px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-wrapper .review-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1rem auto;
+}
+
+.reviews-wrapper .review-info {
+  padding: 3.5rem 2rem;
+  margin: auto;
+  position: relative;
+}
+
+.reviews-wrapper .review-info i {
+  position: absolute;
+  font-size: 2rem;
+  color: #4d4d4d;
+  padding: 1rem;
+  left: 0rem;
+  top: 3.5rem;
+}
+
+.reviews-wrapper .review-info p {
+  text-align: left;
+  color: #4d4d4d;
+}
+
+.reviews-wrapper .review-name {
+  color: #4d4d4d;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+footer {
+  background: #333;
+  padding: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.property-photos-inner {
+  width: 70%;
+  margin: auto;
+}
+
+.property-photos-inner img {
+  height: 450px;
+}
+
+.property-photos-inner .photo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.property-photos-inner .photo-list .photo {
+  width: 24%;
+  height: 200px;
+}
+
+.property-photos-inner .photo-list .photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.rotate .line:first-child {
+  position: relative;
+  animation: topAn 0.2s forwards;
+}
+
+.rotate .line:nth-child(2) {
+  opacity: 0;
+}
+
+.rotate .line:last-child {
+  position: relative;
+  animation: downAn 0.2s forwards;
+}
+
+@keyframes topAn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    margin-top: 15px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes downAn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    margin-top: -15px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recent-properties .properties-inner {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .reviews-wrapper {
+    flex-direction: column;
+  }
+  .reviews-wrapper .review {
+    width: 100%;
+  }
+  .showcase-quote {
+    position: relative;
+  }
+  .showcase,
+  .about {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  header nav {
+    justify-content: space-between;
+    padding: 0.4rem 2rem;
+  }
+  header nav ul {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .recent-properties .properties-inner {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+  }
+  .team-members {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vacancies-inner {
+    width: 100%;
+  }
+  .reviews .review-info {
+    width: 90%;
+  }
+  .contact-inner {
+    display: block;
+  }
+  .contact-inner .contact-right {
+    display: none;
+  }
+  .property-photos-inner {
+    width: 100%;
+  }
+  .apartment {
+    width: 95%;
+  }
+  .property-photos-inner .photo-list {
+    flex-direction: column;
+  }
+  .property-photos-inner .photo-list .photo {
+    width: 100%;
+    height: 200px;
   }
 }
 
