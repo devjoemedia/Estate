@@ -14,10 +14,12 @@
   display: inline-block;
   box-shadow: 0 0 12px 0 #ddd;
   margin: 10px 0;
+  border: none;
 }
 
 .btn-plain {
-  padding: 10px 15px;
+  border: none;
+  padding: 10px 25px;
   outline: none;
   background-color: #444;
   color: #fff;
@@ -25,6 +27,7 @@
   display: inline-block;
   box-shadow: 0 0 12px 0 #ddd;
   margin: 10px 0;
+  border-radius: 5px;
 }
 
 * {
@@ -329,59 +332,134 @@ header nav ul li a {
   text-transform: capitalize;
 }
 
-.apartment {
-  width: 80%;
-  margin: 2rem auto;
+.apartment-inner {
+  display: flex;
+  margin: 30px 0;
 }
 
-.apartment-info {
-  padding: 4rem 2rem;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+.apartment__details {
+  flex: 0.65;
+  margin-right: 20px;
+}
+
+.apartment__details--banner {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 350px;
+  background: url("../img/house-3.jpg");
+  background-position: center;
+}
+
+.apartment__details--info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.apartment__details--info h4 {
   color: #ccc;
+  font-size: 20px;
 }
 
-.apartment-info h2 {
-  font-size: 1.3rem;
-  color: #4d4d4d;
-  padding-bottom: 1rem;
+.apartment__details--info p {
+  font-size: 20px;
 }
 
-.apartment-info .room-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 2.5rem 0;
+.apartment__details--features {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.apartment-description {
-  padding: 2rem 0;
+.apartment__details--features .apartment--feature {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.apartment-description h3 {
-  padding-bottom: 1rem;
-  font-size: 1.3rem;
-  color: #4d4d4d;
+.apartment__details--features .apartment--feature i {
+  margin-right: 20px;
+  background: rgba(204, 204, 204, 0.6);
+  color: #333;
+  padding: 10px;
+  border-radius: 50%;
 }
 
-.apartment-description p {
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #666666;
+.apartment__details--description {
+  padding: 20px;
 }
 
-.apartment-features h3 {
-  font-size: 1.3rem;
-  color: #4d4d4d;
-  padding: 1rem 0;
+.apartment__details--description p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #444;
 }
 
-.apartment-features .feature-info {
-  padding: 1rem 0;
+.apartment__details--description .apartment--action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.apartment-features .feature-info li {
-  list-style-type: circle;
-  padding: 1rem 0;
-  color: #4d4d4d;
+.apartment__details--description .apartment--action button {
+  margin-right: 20px;
+}
+
+.apartment__details--description .apartment--action a {
+  color: #444;
+}
+
+.apartment__reviews {
+  flex: 0.35;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.apartment__reviews--head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.apartment__reviews a {
+  color: #222;
+}
+
+.apartment__review {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.apartment__review--head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.apartment__review--head .review--photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.apartment__review--head .review--name h4 {
+  font-size: 18px;
+  color: #222;
+  font-weight: bold;
+}
+
+.apartment__review--body p {
+  color: #444;
 }
 
 .contact {
@@ -608,6 +686,21 @@ footer {
     width: 100%;
     height: 200px;
   }
+  .apartment-inner {
+    display: flex;
+    margin: 30px 0;
+    flex-direction: column;
+  }
+  .apartment__details {
+    flex: 1;
+    width: 100%;
+  }
+  .apartment__details--features {
+    flex-wrap: wrap;
+  }
+  .apartment__details--features .apartment--feature {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -635,4 +728,3 @@ footer {
     padding: 1rem;
   }
 }
-/*# sourceMappingURL=style.css.map */
