@@ -18,8 +18,12 @@
 }
 
 .btn-plain {
+<<<<<<< HEAD
   border: none;
   padding: 10px 25px;
+=======
+  padding: 10px 15px;
+>>>>>>> a7e61315c8f8af3e0d784ea5c35be877b606fbf1
   outline: none;
   background-color: #444;
   color: #fff;
